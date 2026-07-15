@@ -80,7 +80,7 @@ data/byted_bytehouse_ai_query_local_script_cases.csv
 实际执行脚本是：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/临时添加的文件，仅供参考/byted-bytehouse-ai-query/scripts/execute_sql.py
+/Users/apple1/AI_Code/ai_auto_skill_test/临时添加的文件，仅供参考/byted-bytehouse-ai-query/scripts/execute_sql.py
 ```
 
 真实执行命令形态类似：
@@ -229,7 +229,7 @@ data/byted_bytehouse_ai_query_online_cases.csv
 执行命令：
 
 ```bash
-cd /Users/apple1/AI_Code/ai_auto_test
+cd /Users/apple1/AI_Code/ai_auto_skill_test
 AI_TEST_RUNTIME_PARAMS_FILE="临时添加的文件，仅供参考/account.md" \
 AI_TEST_CASE_FILE="data/byted_bytehouse_ai_query_online_cases.csv" \
 venv/bin/python -m pytest -m smoke --tb=short --junitxml=reports/bytehouse_ai_query_online_junit.xml

@@ -7,7 +7,7 @@
 配置文件：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/config/skills/byted-bytehouse-ai-query-local-script.yaml
+/Users/apple1/AI_Code/ai_auto_skill_test/config/skills/byted-bytehouse-ai-query-local-script.yaml
 ```
 
 核心配置：
@@ -34,7 +34,7 @@ execute_mode: script
 示例文件：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/data/byted_bytehouse_ai_query_local_script_cases.csv
+/Users/apple1/AI_Code/ai_auto_skill_test/data/byted_bytehouse_ai_query_local_script_cases.csv
 ```
 
 字段：
@@ -74,7 +74,7 @@ python scripts/execute_sql.py "SELECT 1"
 ## 3. 执行命令
 
 ```bash
-cd /Users/apple1/AI_Code/ai_auto_test
+cd /Users/apple1/AI_Code/ai_auto_skill_test
 venv/bin/python run.py \
   --case-file data/byted_bytehouse_ai_query_local_script_cases.csv \
   --runtime-params "临时添加的文件，仅供参考/account.md" \
@@ -86,7 +86,7 @@ venv/bin/python run.py \
 报告路径：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/reports/local_script_report.html
+/Users/apple1/AI_Code/ai_auto_skill_test/reports/local_script_report.html
 ```
 
 ## 4. 适合测什么
@@ -110,4 +110,3 @@ upload_file_to_kb.py 是否能上传文件
 验证 OpenClaw 是否能触发 Skill
 验证 Agent 平台的参数追问和对话上下文
 ```
-

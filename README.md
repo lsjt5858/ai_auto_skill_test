@@ -390,7 +390,7 @@ AI 测试不能只靠传统 `assert`，建议采用组合式断言：
 下面是一个适合 AI 自动化测试项目的目录设计，与你当前想法也比较匹配：
 
 ```text
-ai_auto_test_project/
+ai_auto_skill_test_project/
 ├── README.md
 ├── requirements.txt
 ├── pytest.ini
@@ -1063,7 +1063,7 @@ expected_tool: report_service
 ---
 
 如果你认可这个方向，下一步就可以直接开始进入"搭框架"阶段，我可以继续帮你把这份方案落成一个可运行的 Python 项目骨架。
-# ai_auto_test
+# ai_auto_skill_test
 
 ## 19. 当前项目已落地的 MVP 框架
 
@@ -1186,3 +1186,32 @@ data/
 如果新 Skill 有特殊初始化动作，再扩展 `core/setup_manager.py`。
 
 如果新 Skill 需要新的判断方式，再扩展 `evaluators/`，并在 `core/evaluator.py` 中注册策略。
+
+### 19.4 `skills/` 目录保护机制
+
+当前项目已经为 `skills/` 目录加了三层保护：
+
+1. `AGENTS.md`
+2. 本地 Git Hook
+3. GitHub Actions CI 校验
+
+具体说明如下：
+
+- 仓库级规则文件 `AGENTS.md` 明确要求所有 agent 不得修改 `skills/` 下任何内容。
+- 本地提交前会触发 `.githooks/pre-commit`，阻止提交工作区、暂存区或未跟踪的 `skills/` 目录改动。
+- 本地推送前会触发 `.githooks/pre-push`，阻止把包含 `skills/` 目录改动的提交推到远端。
+- 远端 GitHub Actions 会执行 `.github/workflows/protect-skills.yml`，一旦检测到 `skills/` 目录变更就直接失败。
+- 本地与 CI 统一复用 `tools/check_protected_paths.py` 作为检查入口。
+
+本地启用方式：
+
+```bash
+chmod +x .githooks/pre-commit .githooks/pre-push
+git config core.hooksPath .githooks
+```
+
+手动检查某次变更范围：
+
+```bash
+python3 tools/check_protected_paths.py --mode range --base <base_sha> --head <head_sha>
+```
