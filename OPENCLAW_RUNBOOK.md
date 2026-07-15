@@ -7,7 +7,7 @@
 目标链路：
 
 ```text
-本地 ai_auto_test
+本地 ai_auto_skill_test
   -> SSH 连接远程 ArkClaw/OpenClaw 主机
   -> 远程执行 openclaw agent --agent main -m "<case内容>" --json
   -> Agent 在远程机器执行接口测试
@@ -205,4 +205,3 @@ openclaw agent --agent main -m "请回复 hello_openclaw" --timeout 120 --json
 
 1. 在现有 ArkClaw 托管机器上找到真正可入站的 SSH 入口或开放安全组 `TCP 22`。
 2. 如果现有环境无法开放 SSH，则购买一台标准 ECS，自主安装 OpenClaw，作为长期稳定的远程自动化执行机。
-

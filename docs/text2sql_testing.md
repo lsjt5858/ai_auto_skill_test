@@ -13,7 +13,7 @@ Text2SQL 测试用于验证自然语言是否能转换成符合预期的 SQL。
 ## 1. Skill 配置
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/config/skills/byted-bytehouse-ai-query-text2sql.yaml
+/Users/apple1/AI_Code/ai_auto_skill_test/config/skills/byted-bytehouse-ai-query-text2sql.yaml
 ```
 
 核心配置：
@@ -29,7 +29,7 @@ assert_type: keyword+regex
 模板文件：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/data/templates/text2sql_cases.csv
+/Users/apple1/AI_Code/ai_auto_skill_test/data/templates/text2sql_cases.csv
 ```
 
 字段：
@@ -93,4 +93,3 @@ forbidden_words: Error,Traceback,无法生成
 ```
 
 如果后续接入 LLM 裁判，可以把自然语言、生成 SQL、期望 SQL 交给裁判判断是否等价。
-

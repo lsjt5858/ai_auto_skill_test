@@ -489,7 +489,7 @@ Case 级数据放“具体测试内容”：
 如果按通用 Skill 框架来做，建议目录这样设计：
 
 ```text
-ai_auto_test_project/
+ai_auto_skill_test_project/
 ├── config/
 │   ├── settings.py
 │   └── skills/

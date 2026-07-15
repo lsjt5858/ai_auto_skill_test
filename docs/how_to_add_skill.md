@@ -5,25 +5,25 @@
 当前框架的测试模式说明见：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/docs/testing_modes.md
+/Users/apple1/AI_Code/ai_auto_skill_test/docs/testing_modes.md
 ```
 
 本地脚本测试说明：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/docs/local_script_testing.md
+/Users/apple1/AI_Code/ai_auto_skill_test/docs/local_script_testing.md
 ```
 
 Text2SQL 测试说明：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/docs/text2sql_testing.md
+/Users/apple1/AI_Code/ai_auto_skill_test/docs/text2sql_testing.md
 ```
 
 报告说明：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/docs/reporting.md
+/Users/apple1/AI_Code/ai_auto_skill_test/docs/reporting.md
 ```
 
 ## 1. 当前框架核心路径
@@ -31,7 +31,7 @@ Text2SQL 测试说明：
 项目根目录：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test
+/Users/apple1/AI_Code/ai_auto_skill_test
 ```
 
 核心文件：
@@ -122,7 +122,7 @@ rule -> rule
 模板路径：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/config/runtime_params.example.json
+/Users/apple1/AI_Code/ai_auto_skill_test/config/runtime_params.example.json
 ```
 
 你可以复制一份本地文件，例如：
@@ -172,25 +172,25 @@ venv/bin/python run.py --case-file "data/xxx.csv" -m smoke
 Skill 目录：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/临时添加的文件，仅供参考/byted-bytehouse-ai-query
+/Users/apple1/AI_Code/ai_auto_skill_test/临时添加的文件，仅供参考/byted-bytehouse-ai-query
 ```
 
 Skill 配置：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/config/skills/byted-bytehouse-ai-query.yaml
+/Users/apple1/AI_Code/ai_auto_skill_test/config/skills/byted-bytehouse-ai-query.yaml
 ```
 
 评测集：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/临时添加的文件，仅供参考/核心能力测试评测集 - 评测集.csv
+/Users/apple1/AI_Code/ai_auto_skill_test/临时添加的文件，仅供参考/核心能力测试评测集 - 评测集.csv
 ```
 
 运行命令：
 
 ```bash
-cd /Users/apple1/AI_Code/ai_auto_test
+cd /Users/apple1/AI_Code/ai_auto_skill_test
 AI_TEST_CASE_FILE="临时添加的文件，仅供参考/核心能力测试评测集 - 评测集.csv" venv/bin/python -m pytest -m smoke --tb=short
 ```
 
@@ -208,25 +208,25 @@ AI_TEST_CASE_FILE="临时添加的文件，仅供参考/核心能力测试评测
 Skill 目录：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/临时添加的文件，仅供参考/byted-bytehouse-data-asset-analyzer
+/Users/apple1/AI_Code/ai_auto_skill_test/临时添加的文件，仅供参考/byted-bytehouse-data-asset-analyzer
 ```
 
 已新增配置：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/config/skills/byted-bytehouse-data-asset-analyzer.yaml
+/Users/apple1/AI_Code/ai_auto_skill_test/config/skills/byted-bytehouse-data-asset-analyzer.yaml
 ```
 
 已新增评测集模板：
 
 ```text
-/Users/apple1/AI_Code/ai_auto_test/data/byted_bytehouse_data_asset_analyzer_cases.csv
+/Users/apple1/AI_Code/ai_auto_skill_test/data/byted_bytehouse_data_asset_analyzer_cases.csv
 ```
 
 运行离线契约测试：
 
 ```bash
-cd /Users/apple1/AI_Code/ai_auto_test
+cd /Users/apple1/AI_Code/ai_auto_skill_test
 AI_TEST_CASE_FILE="data/byted_bytehouse_data_asset_analyzer_cases.csv" venv/bin/python -m pytest -m smoke --tb=short
 ```
 

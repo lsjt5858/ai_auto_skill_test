@@ -390,7 +390,7 @@ AI 测试不能只靠传统 `assert`，建议采用组合式断言：
 下面是一个适合 AI 自动化测试项目的目录设计，与你当前想法也比较匹配：
 
 ```text
-ai_auto_test_project/
+ai_auto_skill_test_project/
 ├── README.md
 ├── requirements.txt
 ├── pytest.ini
@@ -1063,7 +1063,7 @@ expected_tool: report_service
 ---
 
 如果你认可这个方向，下一步就可以直接开始进入"搭框架"阶段，我可以继续帮你把这份方案落成一个可运行的 Python 项目骨架。
-# ai_auto_test
+# ai_auto_skill_test
 
 ## 19. 当前项目已落地的 MVP 框架
 
